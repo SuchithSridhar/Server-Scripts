@@ -63,6 +63,9 @@ else
         "ssh-stop") 
             bash "${script_dir}/close-from-suchicodes.sh"
         ;;
+        "high-poll") 
+            bash "${script_dir}/high-poll-report.sh"
+        ;;
         *)
         ;;
     esac
