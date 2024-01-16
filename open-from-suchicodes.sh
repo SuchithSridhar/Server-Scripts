@@ -8,8 +8,8 @@
 # REMOTE_SUCHICODES_PORT
 
 # Source environment variables
-if [ -f "~/.env" ]; then
-    source ~/.env
+if [ -f "$HOME/.env" ]; then
+    source $HOME/.env
 fi
 
 remote_ip=suchicodes.com

@@ -13,8 +13,8 @@
 # close-from-suchicodes.sh
 
 # Source environment variables
-if [ -f "~/.env" ]; then
-    source ~/.env
+if [ -f "$HOME/.env" ]; then
+    source $HOME/.env
 fi
 
 if [[ "$SUCHICODES_SERVER_PASSWORD" == "" ]]; then
