@@ -30,7 +30,8 @@ ssh_connection_check=$(ps aux | grep $remote_user@$remote_ip |
 if [[ -z $ssh_connection_check ]]; then
     echo "Starting new reverse ssh connection."
     ssh -R $remote_port:localhost:$local_port -N $remote_user@$remote_ip \
-        -o TCPKeepAlive=yes -o ServerAliveCountMax=20 -o ServerAliveInterval=15
+        -o TCPKeepAlive=yes -o ServerAliveCountMax=20 \
+        -o ServerAliveInterval=15 &
 else
     echo "SSH connection already exists."
 fi
