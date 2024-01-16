@@ -17,7 +17,8 @@ remote_user=suchi
 local_port=22
 
 if [[ "$REMOTE_SUCHICODES_PORT" == "" ]]; then
-    remote_port=2334
+    echo "Remote port not set."
+    exit 1
 else 
     remote_port="$REMOTE_SUCHICODES_PORT"
 fi
