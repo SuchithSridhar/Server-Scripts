@@ -20,8 +20,9 @@ script_dir=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
 pgrep -f $script_name | grep -v $$ | xargs -r kill
 
 # Run for 5 minutes (300 seconds)
+# Poll every 5 seconds
 end=$((SECONDS+300))
 while [ $SECONDS -lt $end ]; do
     bash "${script_dir}/report-to-suchicodes.sh" &
-    sleep 30
+    sleep 5
 done
